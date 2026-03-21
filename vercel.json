@@ -1,0 +1,13 @@
+{
+  "env": {
+    "VITE_KINOPOISK_API_KEY": "4RY5295-3Z0MYKA-PFA5WWK-XSDVWQ1"
+  },
+  "build": {
+    "env": {
+      "VITE_KINOPOISK_API_KEY": "4RY5295-3Z0MYKA-PFA5WWK-XSDVWQ1"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
