@@ -1,0 +1,67 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 64px;
+}
+
+.logo { text-decoration: none; }
+
+.logoText {
+  font-size: 26px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text2);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.link:hover { color: var(--text); background: var(--surface2); }
+
+.active { color: var(--accent) !important; background: rgba(232, 197, 71, 0.1) !important; }
+
+.compareLink { color: var(--accent2) !important; }
+.compareLink:hover { background: rgba(255, 107, 53, 0.1) !important; }
+.compareLink.active { background: rgba(255, 107, 53, 0.1) !important; }
+
+.badge {
+  background: var(--accent);
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.badgeOrange { background: var(--accent2); color: #fff; }
+
+@media (max-width: 480px) {
+  .nav { padding: 0 16px; }
+  .logoText { font-size: 20px; }
+  .link { padding: 6px 10px; font-size: 13px; }
+}

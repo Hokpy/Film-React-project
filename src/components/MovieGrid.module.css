@@ -1,0 +1,82 @@
+.wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.sentinel {
+  height: 1px;
+  margin-top: 32px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 80px 20px;
+  color: var(--text3);
+}
+
+.empty span:first-child {
+  font-size: 48px;
+}
+
+.empty p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text2);
+}
+
+.emptySub {
+  font-size: 14px;
+}
+
+/* Скелетон-карточка */
+.skeleton {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skPoster {
+  aspect-ratio: 2/3;
+  background: var(--surface2);
+}
+
+.skInfo {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skLine {
+  height: 12px;
+  background: var(--surface2);
+  border-radius: 4px;
+}
+
+.skLineShort {
+  width: 50%;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}
